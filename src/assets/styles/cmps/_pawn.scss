@@ -1,0 +1,61 @@
+.pawn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+    .pawn-black {
+        background-image: linear-gradient(
+            -360deg, 
+            rgb(51, 24, 2) , 
+            rgba(39, 22, 0 ) , 
+            rgb(41, 28, 9) , 
+            rgba(61, 28, 1) , 
+            rgba(59, 37, 1) , 
+            rgba(46, 26, 1) , 
+            rgb(41, 28, 18) , 
+            rgb(32, 26, 16), 
+            rgb(46, 34, 18), 
+            rgba(97, 45, 2) , 
+            );  
+        border: 2px solid white;
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .pawn-white {
+        background-image: linear-gradient(
+            -360deg, 
+            rgb(253, 206, 135) , 
+            rgba(182, 82, 1, 0.418) , 
+            rgba(255, 196, 119, 0.979) , 
+            rgb(253, 206, 135) , 
+            rgba(212, 119, 43, 0.096) , 
+            rgba(250, 233, 159, 0.973) , 
+            rgba(255, 196, 119, 0.979) , 
+            rgba(197, 114, 47, 0.288) , 
+            rgba(250, 233, 159, 0.973), 
+            rgba(255, 196, 119, 0.979), 
+            rgba(97, 45, 2, 0.253) , 
+            );  
+        border: 2px solid black;
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+    }
+
+    .pawn-clue {
+        background-color: rgba(237, 242, 243, 0.534);
+        height: 100%;
+        width: 100%;
+        animation: fadeIn 0.6s infinite alternate;
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+        }
+    }
+}

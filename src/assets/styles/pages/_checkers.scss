@@ -1,0 +1,117 @@
+.board {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 300% 300%;
+    background-image: linear-gradient(
+        -90deg,
+        rgb(176, 250, 204) 0%,
+        rgb(214, 221, 255) 25%,
+        rgb(242, 205, 255) 51%,
+        rgb(251, 255, 195) 100%
+    );
+    animation: AnimateBG 8s ease infinite;
+
+    @keyframes AnimateBG {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .btns-container {
+        margin-bottom: rem(10px);
+
+        button {
+            margin-right: rem(5px);
+        }
+    }
+
+    .board-container {
+        display: grid;
+        grid-template-columns: repeat(8, rem(90px));
+        grid-template-rows: repeat(8, rem(90px));
+        border: 10px solid rgb(48, 33, 1);
+
+        .black-tile {
+            background-color: #5e3d01;
+            border: 3px solid rgb(48, 33, 1);
+        }
+
+        .white-tile {
+            background-color: #f8f1d2;
+            border: 3px solid rgb(48, 33, 1);
+        }
+    }
+}
+
+.start-btn {
+    box-shadow: 0px 1px 0px 0px #fff6af;
+    background: linear-gradient(to bottom, #fad292 5%, #6b4303 100%);
+    background-color: #ffec64;
+    border-radius: 6px;
+    border: 1px solid rgb(48, 33, 1);
+    display: inline-block;
+    cursor: pointer;
+    color: #333333;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffee66;
+    &:hover {
+        background: linear-gradient(to bottom, #6b4303 5%, #fad292 100%);
+        background-color: #ffed6463;
+    }
+    &:active {
+        position: relative;
+        top: 1px;
+    }
+}
+
+.undo-btn,
+.redo-btn {
+    box-shadow: 0px 1px 0px 0px #fff6af;
+    background: linear-gradient(to bottom, #fad292 5%, #6b4303 100%);
+    background-color: #ffec64;
+    border-radius: 6px;
+    border: 1px solid rgb(48, 33, 1);
+    display: inline-block;
+    cursor: pointer;
+    color: #333333;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffee66;
+    &:hover {
+        background: linear-gradient(to bottom, #6b4303 5%, #fad292 100%);
+        background-color: #ffed6463;
+    }
+    &:active {
+        position: relative;
+        top: 1px;
+    }
+}
+h1 {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 10px #2e1901;
+    border-radius: 80%;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.63);
+}

@@ -5,6 +5,11 @@
         @content;
     }
 }
+@mixin for-mobile-land-layout {
+    @media (min-width: $mobile-landbreakpoint) {
+        @content;
+    }
+}
 
 @mixin for-tablet-layout {
     @media (min-width: $mobile-breakpoint) {

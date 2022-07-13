@@ -1,4 +1,9 @@
 .board {
+
+ 
+    // @include for-mobile-land-layout{
+    //     zoom: 20%
+    // }
     height: 100%;
     display: flex;
     justify-content: center;
@@ -44,6 +49,16 @@
         grid-template-columns: repeat(8, rem(90px));
         grid-template-rows: repeat(8, rem(90px));
         border: 10px solid rgb(48, 33, 1);
+
+        @include for-mobile-layout{
+            zoom: 50%
+            
+        }
+
+        @include for-tablet-layout{
+            zoom: 30%
+            
+        }
 
         .black-tile {
             background-color: #5e3d01;

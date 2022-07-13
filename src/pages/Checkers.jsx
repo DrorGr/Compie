@@ -161,7 +161,7 @@ export function Checkers() {
   return (
     
     <div  className="board">
-      <h1>Compie's Checkers</h1>
+      <h1> Checkers 1v1</h1>
       <div className="btns-container">
         <button className="start-btn" onClick={handleRestart}>{currBoard.length < 1 ? 'Press to Start' : 'Start Over'}</button>
         <button className="undo-btn" onClick={handleUndo}>Undo</button>
@@ -170,7 +170,7 @@ export function Checkers() {
       </div>
       <div className="board-container">
         {board.map((pieceData, idx) => {
-          return (<div key={Math.random().toString(36).substr(2, 9)} className={pieceData.tileClass} data-idx={idx} onClick={() => handleClick(pieceData, idx)}>
+          return (<div  className={pieceData.tileClass} data-idx={idx} onClick={() => handleClick(pieceData, idx)}>
             <Pawn pawnType={pieceData.pieceType}></Pawn></div>)
         })
       }

@@ -59,6 +59,16 @@
             zoom: 30%
             
         }
+        @include for-tablet-layout{
+            zoom: 30%
+            
+        }
+        @include for-desktop-layout{
+            zoom: 100%
+            
+        }
+
+        
 
         .black-tile {
             background-color: #5e3d01;
